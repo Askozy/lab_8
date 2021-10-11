@@ -1,0 +1,338 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+@font-face{
+    font-family:"thewitcher-medium";
+    src:url("https://dafonttop.com/wp-data/t/406/6406/file/thewitcher-4.ttf") format("woff"),
+    url("https://dafonttop.com/wp-data/t/406/6406/file/thewitcher-4.ttf") format("opentype"),
+    url("https://dafonttop.com/wp-data/t/406/6406/file/thewitcher-4.ttf") format("truetype");
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: 'PT Sans Narrow', sans-serif;
+font-family: 'Yanone Kaffeesatz', sans-serif;
+background-color: rgb(37, 37, 37);
+  
+}
+
+/*туманнннннннн
+****************/
+.fog {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+     
+    background-size: cover;
+    margin-top: 0;
+}
+.fog::before,
+.fog::after,
+.fog div::before, 
+.fog div::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat-x;
+}
+.fog div::before, 
+.fog div::after    {
+    left: 100%;
+}
+.fog::before, 
+.fog div::before {
+    background-image: url("../images/fog-1.png");
+    animation: fogmove 20s linear 0s infinite;
+}
+.fog::after, 
+.fog div::after {
+    background-image: url("../images/fog-2.png");
+    animation: fogmove 10s linear 0s infinite;
+}
+@keyframes fogmove {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+
+.fog_txt {
+    text-align: center;
+    margin-top: 120px;
+    font-size: 40px;
+    width: 100%;
+    color: rgb(218, 218, 218);
+    
+}
+.header {
+    background-color: #252728;
+}
+.header_pic {
+   width: 100%;
+   height: 100%;
+    margin-bottom: -10px;
+   
+}
+.cont_1 {
+     position: relative;
+}
+.header_pic2 {
+   width: 100%;
+   height: 100%;
+    margin-bottom: -10px;
+   
+   
+}
+
+
+.text_2 { 
+    position	: absolute;
+	top: 10%;
+	left: 0;
+	width: 100%;
+    font-size: 65px;
+    padding-left: 5%;
+    display: flex;
+    font-size: 50px;
+    font-weight: normal;
+    cursor: pointer;
+    text-shadow: 0 0 15px rgba(153, 153, 153, 0);
+    color: transparent;
+    transition: all .5s;
+    }
+    .text_2:hover {
+      text-shadow: 0 0 0px #333;
+      cursor: pointer;
+      }
+.text_3 {
+    position	: absolute;
+	top: 75%;
+	
+	width: 100%;
+    font-size: 52px;
+    padding-left: 15%;
+    display: flex;
+    font-size: 50px;
+    font-weight: normal;
+    cursor: pointer;
+    text-align: right;
+    color: #fff;
+    text-shadow: 0 0 15px rgba(153, 153, 153, 0);
+    color: transparent;
+    transition: all .5s;
+    }
+    .text_3:hover {
+      text-shadow: 0 0 0px #333;
+      cursor: pointer;
+      color: #fff;
+      }
+.text_4 {
+    position	: absolute;
+	top: 45%;
+	width: 100%;
+    font-size: 52px;
+    padding-left: 35%;
+    display: flex;
+    font-size: 70px;
+    font-weight: normal;
+    cursor: pointer;
+    text-align: right;
+    color: #fff;
+    text-shadow: 0 0 15px rgba(153, 153, 153, 0);
+    color: transparent;
+    transition: all .5s;
+    }
+    .text_4:hover {
+      text-shadow: 0 0 0px #333;
+      cursor: pointer;
+      color: #fff;
+      }
+      /*выбор истории*******************/
+      .history {
+          width: 100%;
+      }
+      .cont_3 {
+          position: relative;
+      }
+      .h_txt1 {
+        position: absolute;
+        top: 60px;
+        text-align: center;
+        color: #fff;
+        width: 100%;
+        font-size: 52px;
+      }
+
+      .h_txt2 {
+        position: absolute;
+        top: 250px;
+        padding-left: 5%;
+        text-align: left;
+        color: #fff;
+        width: 100%;
+        font-size: 52px;
+        font-weight: normal;
+      }
+
+
+      .h_txt3 {
+        position: absolute;
+        top: 450px;
+        text-align: right;
+        color: #fff;
+        width: 100%;
+        font-size: 52px;
+        padding-right: 7%;
+       
+       
+        
+        
+        
+      }
+     
+      .h_txt3 {
+        font-size: 60px;
+        font-weight: normal;
+        cursor: pointer;
+        text-shadow: 0 0 0 #80202e;
+        color: transparent;
+        animation: shadows 4s infinite ease-out ;
+        
+        }
+      
+      @keyframes shadows {
+        0% {
+            text-shadow: 0 0 0 rgba(255, 255, 255, 0);
+        }
+        20% {
+            text-shadow: 0 0 0 rgb(255, 255, 255);
+        }
+        60% {
+          text-shadow: 0 0 0 #80202e;
+        }
+        90% {
+          text-shadow: 0 30px 40px transparent;
+        }
+        100% {
+            text-shadow: 0 0 0 transparent;
+        }
+      }
+
+
+
+
+
+
+
+      /*трисс и еннифер**********************/
+.girls {
+    text-align: center;
+    font-size: 50px;
+    margin-top: 30px;
+    color: #fff;
+}
+.enn {
+    opacity: 0.5;
+    transition: .2s linear, color .2s linear;
+    
+    padding-left: 1%;
+      
+}.enn:hover {
+        opacity: 1;
+      }
+.triss {
+    height: 700px;
+    opacity: 0.5;
+    transition: .2s linear, color .2s linear;
+    padding-right: 1%;
+      
+}.triss:hover {
+        opacity: 1;
+      }
+
+
+.enn_text {
+  
+    font-size: 50px;
+   
+    width: 50%;
+    color: #fff;
+}
+.triss_text {
+    width: 50%;
+    font-size: 50px;
+    
+    color: #fff;
+}
+.table1 {
+   width: 100%;
+   text-align: center
+}
+.girls2 {
+   display: flex;
+   justify-content: space-between;
+
+}
+.link1 {
+    text-decoration: none;
+    color: #fff;
+    transition: .2s linear, color .2s linear;
+}
+.link1:hover {
+    color: rgb(215, 156, 243);
+}
+.link2 {
+    text-decoration: none;
+    color: #fff;
+    transition: .2s linear, color .2s linear;
+}
+.link2:hover {
+    color: rgb(230, 172, 118);
+}
+
+/*vdeoooooooo*/
+.video {
+    margin: 0 auto ;
+    display: flex;
+
+}
